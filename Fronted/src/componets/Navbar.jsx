@@ -14,9 +14,6 @@ const Navbar = () => {
         height: "30px",
       }}
     >
-      <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-        Home
-      </Link>
       <Link
         to="/uploadVideo"
         style={{ textDecoration: "none", color: "white" }}

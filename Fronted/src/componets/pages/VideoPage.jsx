@@ -4,7 +4,7 @@ import "./video.css";
 
 const VideosPage = () => {
   const [videoData, setVideoData] = useState([]);
-  const navigate = useNavigate(); // React Router's navigation hook
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedVideos = JSON.parse(localStorage.getItem("videos")) || [];
@@ -12,7 +12,7 @@ const VideosPage = () => {
   }, []);
 
   const handleCardClick = (video) => {
-    navigate("/VideoPlayer", { state: { video } }); // Navigate with state
+    navigate("/VideoPlayer", { state: { video } });
   };
 
   return (
@@ -23,7 +23,7 @@ const VideosPage = () => {
           <div
             key={index}
             className="video-card"
-            onClick={() => handleCardClick(video)} // On card click
+            onClick={() => handleCardClick(video)}
           >
             <h4>{video.title}</h4>
             <p>{video.description}</p>
